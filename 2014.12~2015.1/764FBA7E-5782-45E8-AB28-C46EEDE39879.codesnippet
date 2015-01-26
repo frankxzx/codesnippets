@@ -4,21 +4,19 @@
 <dict>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>        ViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"mainViewController"];
-        [self.navigationController pushViewController:vc animated:YES];
-</string>
+	<string>@synthesize &lt;#property#&gt; = _&lt;#propertyIvar#&gt;;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B2601497-A9C7-4513-BA31-303C5B443426</string>
+	<string>764FBA7E-5782-45E8-AB28-C46EEDE39879</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>加载storyboard 跳转</string>
+	<string>Synthesize</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

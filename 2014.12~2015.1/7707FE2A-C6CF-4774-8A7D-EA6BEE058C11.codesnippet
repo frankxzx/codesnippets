@@ -3,20 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>RGB</string>
+	<string>aaa</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>TopLevel</string>
+		<string>ClassInterfaceMethods</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// 2.获得RGB颜色
-#define IWColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]</string>
+	<string>@property (nonatomic, assign) &lt;#type#&gt; &lt;#name#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>94CAC197-D8E9-4211-9F10-B159F1DDF639</string>
+	<string>7707FE2A-C6CF-4774-8A7D-EA6BEE058C11</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>获得RGB颜色</string>
+	<string>ELC property declaration - assign</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

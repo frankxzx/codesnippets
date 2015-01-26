@@ -3,26 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>label</string>
+	<string>rrr</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>ClassInterfaceMethods</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>UILabel *placeholderLabel = [[UILabel alloc] init];
-        placeholderLabel.textColor = [UIColor lightGrayColor];
-        placeholderLabel.hidden = YES;
-        placeholderLabel.numberOfLines = 0;
-        placeholderLabel.backgroundColor = [UIColor clearColor];
-        placeholderLabel.font = self.font;
-        [self insertSubview:placeholderLabel atIndex:0];
-        self.placeholderLabel = placeholderLabel;</string>
+	<string>@property (nonatomic, retain) &lt;#type#&gt; &lt;#name#&gt;;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>47024922-1DA7-46BB-9E8E-C7675F37BBAD</string>
+	<string>E10BEAE2-7433-4892-9314-95759F276395</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>创建UILabel</string>
+	<string>ELC Property declaration - retain</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

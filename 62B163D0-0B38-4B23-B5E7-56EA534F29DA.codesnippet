@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>StringOrComment</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//Configuring a date formatter
+
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [dateFormatter setGeneratesCalendarDates:YES];
+    
+    [dateFormatter setLocale:[NSLocale currentLocale]];
+    
+    [dateFormatter setCalendar:[NSCalendar autoupdatingCurrentCalendar]];
+    
+    [dateFormatter setTimeZone:[NSTimeZone defaultTimeZone]];
+    
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    
+    DOB.placeholder = [NSString stringWithFormat:@"Example: %@",[dateFormatter stringFromDate:[NSDate date]]];
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>62B163D0-0B38-4B23-B5E7-56EA534F29DA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>设置日期格式</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

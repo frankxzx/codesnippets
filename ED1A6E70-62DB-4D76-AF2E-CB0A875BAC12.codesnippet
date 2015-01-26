@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>self.userNameTextField.layer.cornerRadius=19;
+    self.userNameTextField.layer.borderWidth=1;
+    self.userNameTextField.layer.borderColor=[UIColor whiteColor].CGColor;
+    self.userNameTextField.backgroundColor=[UIColor  clearColor];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>ED1A6E70-62DB-4D76-AF2E-CB0A875BAC12</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>圆角的textfield</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

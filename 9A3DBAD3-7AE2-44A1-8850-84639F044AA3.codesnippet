@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>StringOrComment</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//利用Safari打开一个链接
+
+NSURL *url = [NSURL URLWithString:@"http://www.cnblogs.com/tracy-e/"];
+
+[[UIApplication sharedApplication] openURL:url];
+
+
+
+//利用UIWebView显示pdf文件、网页。。。
+
+webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+
+[webView setDelegate:self];
+
+[webView setScalesPageToFit:YES];
+
+[webView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+
+[webView setAllowsInlineMediaPlayback:YES];
+
+[self.view addSubview:webView];
+
+NSString *pdfPath = [[NSBundle mainBundle] pathForResource:@"ojc" ofType:@"pdf"];
+
+NSURL *url = [NSURL fileURLWithPath:pdfPath];
+
+NSURLRequest *request = [NSURLRequest requestWithURL:url
+                         
+                                         cachePolicy:NSURLRequestUseProtocolCachePolicy
+                         
+                                     timeoutInterval:5];
+
+[webView loadRequest:request];
+
+
+
+
+
+[myWebView loadRequest:[NSURLRequest requestWithURL:[NSURL
+                                                     
+                                                     URLWithString: @"http://www.cnblogs.com/tracy-e/"]]];
+
+
+
+NSString *errorString = [NSString stringWithFormat:@"&lt;html&gt;&lt;center&gt;&lt;font size=
+                         
+                         +5 color ='red'&gt;An Error Occurred:&lt;br&gt;%@&lt;/fone&gt;&lt;/center&gt;&lt;/html&gt;",error];
+                         
+                         [myWebView loadHTMLString:errorString baseURL:nil];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9A3DBAD3-7AE2-44A1-8850-84639F044AA3</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>利用Safari打开一个链接 利用UIWebView显示pdf文件、网页</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

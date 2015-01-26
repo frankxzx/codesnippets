@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    //汉字转码
+    
+    NSString *oriString = @"\u67aa\u738b";
+    
+    NSString *escapedString = [oriString
+                               
+                               stringByReplacingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+    NSLog(@"----%@",escapedString);</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>72510B8C-D55A-4A87-B4AC-9D63474E36E2</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>汉字转码 utf8</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

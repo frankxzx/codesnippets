@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark 设置提示信息文本
+- (void)setInfoText:(NSString *)infoText
+{
+    if (infoText.length == 0) {
+        self.infoTextView.text = @"";
+        return;
+    }
+    // 1. 取出当前textView中的内容
+    NSMutableString *strM = [self.infoTextView.text mutableCopy];
+    // 2. 追加文本
+    [strM appendFormat:@"%@\n", infoText];
+    // 3. 设置textView中的内容
+    self.infoTextView.text = [strM copy];
+    // 4. 滚动到文本框的末尾
+    NSRange r = NSMakeRange(strM.length - 1, 1);
+    [self.infoTextView scrollRangeToVisible:r];
+}
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CDFC8823-3CB5-457A-8B50-44E015416736</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>添加到textView中</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

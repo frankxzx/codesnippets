@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    //设置阴影的颜色
+    self.customView.layer.shadowColor=[UIColor blackColor].CGColor;
+    //设置阴影的偏移量，如果为正数，则代表为往右边偏移
+    self.customView.layer.shadowOffset=CGSizeMake(15, 5);
+    //设置阴影的透明度(0~1之间，0表示完全透明)
+    self.customView.layer.shadowOpacity=0.6;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>408EB5F5-2328-4D0D-960F-973AD625BB2F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>CALayer设置阴影</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

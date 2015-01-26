@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>{
+                     UIAlertView *alertView =[[UIAlertView   alloc]initWithTitle:@"已检测到最新版本是否立即更新？" message:nil delegate:self cancelButtonTitle:@"以后再说！" otherButtonTitles:@"立即更新！", nil];
+                     
+                     [alertView show];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1CBC4AB7-38DE-47A0-9525-8CAD9BC826CB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIAlertView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

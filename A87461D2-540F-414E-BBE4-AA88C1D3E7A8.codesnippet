@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>StringOrComment</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//点击键盘的next按钮，在不同的textField之间换行
+
+//首先给不同的textField赋不同的且相邻的tag值
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+
+{
+    
+    if ([textField returnKeyType] != UIReturnKeyDone)
+        
+    {
+        
+        NSInteger nextTag = [textField tag] + 1;
+        
+        UIView *nextTextField = [[self tableView] viewWithTag:nextTag];
+        
+        [nextTextField becomeFirstResponder];
+        
+    }
+    
+    else {
+        
+        [textField resignFirstResponder];
+        
+    }
+    
+    return YES;
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A87461D2-540F-414E-BBE4-AA88C1D3E7A8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>不同的textField之间换行</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

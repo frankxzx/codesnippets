@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>  UIView *receiveOrderView = [nib objectAtIndex:0];
+    CGRect tmpFrame = [[UIScreen mainScreen] bounds];
+    [receiveOrderView setCenter:CGPointMake(tmpFrame.size.width / 2, tmpFrame.size.height / 2)];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>55DCCBD6-90FD-4816-BF08-B36EDEDFF0F9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>将view的中点 中心 设置到屏幕居中的位置</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

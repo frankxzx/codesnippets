@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark 返回每组标题索引
+-(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
+    NSLog(@"生成组索引");
+    NSMutableArray *indexs=[[NSMutableArray alloc]init];
+    for(KCContactGroup *group in _contacts){
+        [indexs addObject:group.name];
+    }
+    return indexs;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>04EC5670-FD59-4FC4-ABD7-9EC7A24BAB37</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>索引</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)requestByUrl:(NSURL *)url
+     andFinishedName:(NSString *)finishNotificationName
+       andFailedName:(NSString *)failedNotificationName
+{
+    //判断网络是否可用
+    if(self.appDelegate.reachablity.currentReachabilityStatus == kNotReachable)
+    {
+//        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:kErrorDescriptionNoNetWork                                                                      forKey:NSLocalizedDescriptionKey];
+//        NSError *error=[[NSError alloc] initWithDomain:kDomain code:kErrorCodeNoNetWork userInfo:userInfo];
+        [[NSNotificationCenter defaultCenter] postNotificationName:failedNotificationName object:@"网络无法连接，请检查网络状态。"];
+        return;
+    }
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject)
+    {
+        NSString *requestTmp = [NSString stringWithString:operation.responseString];
+        NSData *resData = [[NSData alloc] initWithData:[requestTmp dataUsingEncoding:NSUTF8StringEncoding]];
+        NSError *error;
+        NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:resData
+                                                           options:NSJSONReadingMutableLeaves
+                                                             error:&amp;error];
+        NSLog(@"%@",dict);
+        if(dict!=nil)
+        {
+            NSLog(@"%@",[[NSNumber numberWithInt:[dict[@"error"] intValue]] errorDescription] );
+            if(dict[@"error"]!=nil &amp;&amp; [dict[@"error"] intValue] != 0)
+            {
+//                NSDictionary *userInfo = [NSDictionary dictionaryWithObject:dict[@"errmsg"]                                                                     forKey:NSLocalizedDescriptionKey];
+                
+//                NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[[NSNumber numberWithInt:[dict[@"error"] intValue]] errorDescription]                                                                    forKey:NSLocalizedDescriptionKey];
+                
+//                error = [NSError errorWithDomain:kDomain code:[dict[@"error"] intValue] userInfo:userInfo];
+                [[NSNotificationCenter defaultCenter] postNotificationName:failedNotificationName  object:dict[@"errmsg"]];
+            }
+            else
+            {
+                [[NSNotificationCenter defaultCenter] postNotificationName:finishNotificationName object:dict];
+            }
+        }
+        else
+        {
+            [[NSNotificationCenter defaultCenter] postNotificationName:failedNotificationName object:@"网络数据解析失败"];
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error)
+    {
+//        [[NSNotificationCenter defaultCenter] postNotificationName:failedNotificationName object:error];
+        [[NSNotificationCenter defaultCenter] postNotificationName:failedNotificationName object:@"网络请求失败"];
+
+    }];
+    [operation start];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3ED832CB-8AD8-4E18-A69A-B028D9C24ED1</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>webservice网络afn</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

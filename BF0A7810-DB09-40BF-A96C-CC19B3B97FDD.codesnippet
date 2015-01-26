@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>  UIDevice *device = [UIDevice currentDevice];
+    
+    BOOL backgroundSupported = NO;
+    
+    if ([device respondsToSelector:@selector(isMultitaskingSupported)]){
+        
+        backgroundSupported = device.multitaskingSupported;
+        
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BF0A7810-DB09-40BF-A96C-CC19B3B97FDD</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>判断设备是否支持多任务运行</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

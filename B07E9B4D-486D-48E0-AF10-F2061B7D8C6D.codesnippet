@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (NSBundle *)resourceBundle:(NSString *)bundleName
+{
+
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:bundleName ofType:@"bundle"]; //显然这里你也可以通过其他的方式取得，总之找到bundle的完整路径即可。
+    
+    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+    
+    return bundle;
+}
+- (UIImage *)doubanImageForName:(NSString *)imageName
+{
+    NSBundle *bundle = [[self class] resourceBundle:@"Douban"];
+    &lt;p&gt;
+    return [UIImage imageWithContentsOfFile:[bundle pathForResource:[NSString stringWithFormat:@"images/%@", imageName] ofType:@"png"]];//我这里是有一个&lt;span style="font-size:9pt;line-height:1.5;"&gt;Douban.bundle的bundle文件，这个bundle文件下面有一个images文件夹。你想要的图片就在这个文件夹下面。&lt;/span&gt;
+    &lt;/p&gt;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B07E9B4D-486D-48E0-AF10-F2061B7D8C6D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>bundle创建</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

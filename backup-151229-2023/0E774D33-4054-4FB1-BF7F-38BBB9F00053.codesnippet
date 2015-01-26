@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    //添加下拉
+//    UIRefreshControl 只适用于UITableViewController
+    UIRefreshControl *rc=[[UIRefreshControl alloc] init];
+    rc.attributedTitle=[[NSAttributedString alloc] initWithString:@"下拉刷新"];
+    [rc addTarget:self action:@selector(refreshTableView) forControlEvents:UIControlEventValueChanged];
+    
+    self.refreshControl = rc;
+
+
+
+- (void)refreshTableView
+{
+    if(self.refreshControl.refreshing)
+    {
+        self.refreshControl.attributedTitle=[[NSAttributedString alloc] initWithString:@"加载中"];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(findAllNoteFinished:) name:kNotifactionBLFindAllFinished object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(findAllNoteFailed:) name:kNotifactionBLFindAllFailed object:nil];
+        [self.bl findAllNote];
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0E774D33-4054-4FB1-BF7F-38BBB9F00053</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>下拉刷新</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

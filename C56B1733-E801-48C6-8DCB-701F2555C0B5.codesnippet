@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// 判断是否为iOS7系统
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] &gt;= 7.0)
+
+// 判断设备是否为iPhone5
+#define DEVICE_IS_IPHONE5 ([[UIScreen mainScreen] bounds].size.height == 568)
+// 判断设备是否为iPhone6
+#define DEVICE_IS_IPHONE6 (kAppWidth == 375)
+// 判断设备是否为iPhone6Plus
+#define DEVICE_IS_IPHONE6Plus (kAppWidth == 414)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C56B1733-E801-48C6-8DCB-701F2555C0B5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>判断ios系统版本，iPhone型号</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

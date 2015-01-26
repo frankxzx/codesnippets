@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string> 
+    //创建一个自定义的gcd队列
+    dispatch_queue_t queue=dispatch_queue_create("myQueue", NULL);
+    //将你要做的操作放入这个队列
+    dispatch_async(queue, ^{
+        //多线程任务
+        //耗时的网络操作
+        for (int i=0;i&lt;3000; i++)
+        {
+            NSLog(@"多线程8:%i",i);
+        }
+        
+        //任务完成了，回到主线程，更新UI界面
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //在主线程中更新界面元素
+            //例如self.infoLabel.text=result;
+            NSLog(@"主线程:多线程8结束了");
+        });
+    });
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B7F1E2E9-9E62-4824-8A1E-D2A772F0FE6D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>GCD</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

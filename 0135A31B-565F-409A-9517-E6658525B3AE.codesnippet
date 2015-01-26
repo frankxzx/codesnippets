@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>{ status code: 200, headers {
+    "Content-Length" = 14;
+    "Content-Type" = "text/plain;charset=utf-8";
+    Date = "Thu, 22 May 2014 10:37:50 GMT";
+    Server = "Apache-Coyote/1.1";
+    "Set-Cookie" ="JSESSIONID=C0DFED60A154557F8386E62AB2A066CE; Path=/FHJRDT";
+} }, NSLocalizedDescription=Request failed:unacceptable content-type: text/plain}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0135A31B-565F-409A-9517-E6658525B3AE</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>text/plain的错误</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

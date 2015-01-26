@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)perform
+{
+    UIViewController* source = (UIViewController *)self.sourceViewController;
+    UIViewController* destination = (UIViewController *)self.destinationViewController;
+    
+    CGRect sourceFrame = source.view.frame;
+    sourceFrame.origin.x = -sourceFrame.size.width;
+    
+    CGRect destFrame = destination.view.frame;
+    destFrame.origin.x = destination.view.frame.size.width;
+    destination.view.frame = destFrame;
+    
+    destFrame.origin.x = 0;
+    [source.view.superview addSubview:destination.view];
+    [UIView animateWithDuration:.25
+                     animations:^{
+                         source.view.frame = sourceFrame;
+                         destination.view.frame = destFrame;
+                     }
+                     completion:^(BOOL finished) {
+                         [source presentViewController:destination animated:NO completion:nil];
+                     }];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4A13D347-A4F9-4F2F-B9D3-8C205FBB61CA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>在没有UINavigationController的情况下实现push动画</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

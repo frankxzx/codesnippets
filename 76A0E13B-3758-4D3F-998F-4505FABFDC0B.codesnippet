@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)fetchAllPods:(void (^)(NSArray *pods))callback page:(NSUInteger)page
+{
+    NSString *urlString = [NSString stringWithFormat:@"http://localhost:4567/specs?page=%d", page];
+    NSURL *url = [NSURL URLWithString:urlString];
+    [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:
+      ^(NSData *data, NSURLResponse *response, NSError *error) {
+          //解析json
+          id result = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+          //判断是否已经解析为字典
+          if ([result isKindOfClass:[NSDictionary class]]) {
+              NSArray *pods = result[@"result"];
+              callback(pods);
+              NSNumber* numberOfPages = result[@"number_of_pages"];
+              NSUInteger nextPage = page + 1;
+              if (nextPage &lt; numberOfPages.unsignedIntegerValue) {
+                  [self fetchAllPods:callback page:nextPage];
+              }
+          }
+      }] resume];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>76A0E13B-3758-4D3F-998F-4505FABFDC0B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>通过NSURLSession 网络请求</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string> [ UIApp openURL: [ NSURL URLWithString:@"http://www.apple.com" ] ];
+
+或者：
+
+
+
+1.[ UIApp openURL: [ NSURL URLWithString:@"mailto:apple@mac.com?Subject=hello" ] ];
+
+与此同时，iPhone还包含一些其他除了http://或者mailto:之外的URL：
+
+
+
+sms:// 可以调用短信程序
+
+
+
+tel:// 可以拨打电话
+
+
+
+itms:// 可以打开MobileStore.app
+
+
+
+audio-player-event:// 可以打开iPod
+
+
+
+audio-player-event://?uicmd=show-purchased-playlist 可以打开iPod播放列表
+
+
+
+video-player-event:// 可以打开iPod中的视频
+
+
+
+
+
+get iphone uniqueIdentifier</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E32F3BD6-B1B8-4FCA-B12D-6D5F91CE884D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIApp 调用电话 短信 邮件</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

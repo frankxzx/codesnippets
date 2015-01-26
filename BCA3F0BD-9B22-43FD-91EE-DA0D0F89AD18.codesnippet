@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>StringOrComment</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//键盘覆盖输入框
+
+//当键盘调出时将输入框覆盖时，可以用下方法：
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+
+{
+    
+    [self.view setFrame:CGRectMake(0, -100, 320, 480) ];
+    
+    return YES;
+    
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+
+{
+    
+    [self.view setFrame:CGRectMake(0, 0, 320, 480)];
+    
+    return YES;
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BCA3F0BD-9B22-43FD-91EE-DA0D0F89AD18</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>键盘遮挡textfield的问题</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

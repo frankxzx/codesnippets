@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSString *urlStr =@"http://xxxx";
+AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManagermanager];
+manager.responseSerializer = [AFHTTPResponseSerializerserializer]; //很重要，去掉就容易遇到错误，暂时还未了解更加详细的原因
+[managerGET:urlStr parameters:@{@"username":@"xxx",@"password":@"xxx"}success:^(AFHTTPRequestOperation *operation,id responseObject) {
+    // 解析成功
+    NSLog(@"JSON: %@", responseObject);
+}failure:^(AFHTTPRequestOperation *operation,NSError *error) {
+    // 解析失败
+    NSLog(@"error:++++%@",error.localizedDescription);
+}];}o</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7F55312A-025D-4067-8200-21AE166EFE13</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>JSon解析</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

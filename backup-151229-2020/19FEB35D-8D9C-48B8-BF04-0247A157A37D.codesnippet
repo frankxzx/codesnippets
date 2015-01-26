@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier=@"name";
+    BOOL nibsRegistered=NO;
+    if (!nibsRegistered) {
+        UINib *nib=[UINib nibWithNibName:@"MyCell" bundle:nil];
+        [tableView registerNib:nib forCellReuseIdentifier:cellIdentifier];
+        nibsRegistered=YES;
+    }
+    MyCell *cell=[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    //cell 上的元素初始化代码
+    
+    return cell;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>19FEB35D-8D9C-48B8-BF04-0247A157A37D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>nib Cell的复用</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

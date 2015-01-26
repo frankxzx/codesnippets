@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//设置导航栏全局样式
+    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
+    attrs[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    attrs[NSFontAttributeName] = [UIFont systemFontOfSize:16];
+    [[UINavigationBar appearance] setTitleTextAttributes:attrs];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor orangeColor]];
+    </string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>130C55C5-0565-452D-AF95-596C40839A43</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>设置导航栏全局样式 导航栏字体颜色</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
